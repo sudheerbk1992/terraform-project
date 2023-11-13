@@ -1,13 +1,13 @@
 provider "aws" {
-region = "ap-southeast-4"
+region = "ap-south-2"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-08a3be10cebd4f6aa"
   instance_type   = "t2.micro"
-  key_name        = ""
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4a"
+  availability_zone = "ap-south-2a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -22,11 +22,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-08a3be10cebd4f6aa"
   instance_type   = "t2.micro"
-  key_name        = ""
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4b"
+  availability_zone = "ap-south-2b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -41,22 +41,22 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-08a3be10cebd4f6aa"
   instance_type   = "t2.micro"
-  key_name        = ""
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4a"
+  availability_zone = "ap-south-2a"
   tags = {
     Name = "app-server-1"
   }
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-08a3be10cebd4f6aa"
   instance_type   = "t2.micro"
-  key_name        = ""
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4b"
+  availability_zone = "ap-south-2b"
   tags = {
     Name = "app-server-2"
   }
@@ -87,7 +87,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "bksterraformproject001"
+  bucket = "bksterra001002003formproject001"
 }
 
 resource "aws_iam_user" "seven" {
@@ -102,7 +102,7 @@ default = ["user1", "user2", "user3", "user4"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "ap-southeast-4a"
+ availability_zone = "ap-south-2a"
   size = 40
   tags = {
     Name = "ebs-001"
