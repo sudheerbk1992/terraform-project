@@ -3,7 +3,7 @@ region = "ap-southeast-4"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-09073b99f17d05c7b"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -22,7 +22,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-09073b99f17d05c7b"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -41,7 +41,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-09073b99f17d05c7b"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -52,7 +52,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0131a8a3d2d20f8f9"
+  ami             = "ami-09073b99f17d05c7b"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
