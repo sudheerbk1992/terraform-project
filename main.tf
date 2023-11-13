@@ -1,13 +1,13 @@
 provider "aws" {
-region = "ap-southeast-4"
+region = "ap-south-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-09073b99f17d05c7b"
+  ami             = "ami-0a6ed6689998f32a5"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4a"
+  availability_zone = "ap-south-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -22,11 +22,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-09073b99f17d05c7b"
+  ami             = "ami-0a6ed6689998f32a5"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4b"
+  availability_zone = "ap-south-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -41,22 +41,22 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-09073b99f17d05c7b"
+  ami             = "ami-0a6ed6689998f32a5"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4a"
+  availability_zone = "ap-south-1a"
   tags = {
     Name = "app-server-1"
   }
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-09073b99f17d05c7b"
+  ami             = "ami-0a6ed6689998f32a5"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-southeast-4b"
+  availability_zone = "ap-south-1b"
   tags = {
     Name = "app-server-2"
   }
@@ -102,7 +102,7 @@ default = ["user1", "user2", "user3", "user4"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "ap-southeast-4a"
+ availability_zone = "ap-south-1a"
   size = 40
   tags = {
     Name = "ebs-001"
