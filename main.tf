@@ -3,9 +3,9 @@ region = "ap-southeast-4"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0fefa47f3b093ef12"
+  ami             = "ami-0131a8a3d2d20f8f9"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-4a"
   user_data       = <<EOF
@@ -22,9 +22,9 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0fefa47f3b093ef12"
+  ami             = "ami-0131a8a3d2d20f8f9"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-4b"
   user_data       = <<EOF
@@ -41,7 +41,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0fefa47f3b093ef12"
+  ami             = "ami-0131a8a3d2d20f8f9"
   instance_type   = "t2.micro"
   key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -52,9 +52,9 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0fefa47f3b093ef12"
+  ami             = "ami-0131a8a3d2d20f8f9"
   instance_type   = "t2.micro"
-  key_name        = "rahamabc"
+  key_name        = "LinuxKeysIndia"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-4b"
   tags = {
