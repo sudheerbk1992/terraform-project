@@ -4,7 +4,7 @@ region = "ap-south-2"
 
 resource "aws_instance" "one" {
   ami             = "ami-08a3be10cebd4f6aa"
-  instance_type   = "t2.micro"
+  instance_type   = "t3.micro"
   key_name        = "hydkeys"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-2a"
@@ -23,7 +23,7 @@ EOF
 
 resource "aws_instance" "two" {
   ami             = "ami-08a3be10cebd4f6aa"
-  instance_type   = "t2.micro"
+  instance_type   = "t3.micro"
   key_name        = "hydkeys"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-2b"
@@ -42,7 +42,7 @@ EOF
 
 resource "aws_instance" "three" {
   ami             = "ami-08a3be10cebd4f6aa"
-  instance_type   = "t2.micro"
+  instance_type   = "t3.micro"
   key_name        = "hydkeys"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-2a"
@@ -53,7 +53,7 @@ resource "aws_instance" "three" {
 
 resource "aws_instance" "four" {
   ami             = "ami-08a3be10cebd4f6aa"
-  instance_type   = "t2.micro"
+  instance_type   = "t3.micro"
   key_name        = "hydkeys"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-2b"
